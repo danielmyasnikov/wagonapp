@@ -1,0 +1,23 @@
+---
+title: Home page
+published: true
+handle: home
+---
+{% extends 'layouts/simple' %}
+
+{% block content/main %}
+.row
+  .col-lg-4
+    {% editable_text first_column %}
+    h2 Heading #1
+    p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+    {% endeditable_text %}
+    {% editable_model home_content %}
+    .row
+      .col-sm-12
+      {% for home_content in contents.home_content %}
+      h1 {{ home_content.title }}
+      p {{ home_content.body }}
+      {% endfor %}
+    {% endeditable_model %}
+{% endblock %}

@@ -1,0 +1,5 @@
+local:
+  host: http://localhost:3000
+  handle: niko
+  email: daniel.g.myasnikov@gmail.com
+  api_key: 74a995e614cd983727da41206f363f64ad0ed6f4

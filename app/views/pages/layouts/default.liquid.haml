@@ -1,0 +1,769 @@
+---
+title: Default layout
+is_layout: false
+---
+!!!
+%html
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1", :name => "viewport"}/
+    %title Viktoria Niko
+    {{ 'css/bootstrap.css' | stylesheet_tag: 'screen, projection' }}
+    {{ 'css/style.css' | stylesheet_tag: 'screen, projection' }}
+    {{ 'font-awesome.min.css' | stylesheet_tag: 'screen, projection' }}
+    {{ 'bower_components/owl.carousel/assets/owl.carousel.css' | stylesheet_tag: 'screen, projection' }}
+    {{ 'bower_components/owl.carousel/assets/owl.theme.default.css' | stylesheet_tag: 'screen, projection' }}
+    {{ 'bower_components/FlexSlider/flexslider.css' | stylesheet_tag: 'screen, projection' }}
+
+    {{ 'bower_components/megafolio/css/settings.css' | stylesheet_tag: 'screen, projection' }}
+    {{ 'bower_components/fancybox/jquery.fancybox.css' | stylesheet_tag: 'screen, projection' }}
+    {{ 'css/jquery.fullPage.css' | stylesheet_tag: 'screen, projection' }}
+    {{ 'bower_components/tooltipster/css/tooltipster.css' | stylesheet_tag: 'screen, projection' }}
+    {{ 'css/bootstrap.css' | stylesheet_tag: 'screen, projection' }}
+    {{ 'css/bootstrap.css' | stylesheet_tag: 'screen, projection' }}
+
+    {{ bower_components/tooltipster/css/themes/tooltipster-shadow.css | stylesheet_tag: 'screen, projection' }}
+    {{ bower_components/tabulous/tabulous.css | stylesheet_tag: 'screen, projection' }}
+    {{ https://fonts.googleapis.com/css?family=Raleway:400,900,800,700,600,500,300%7COpen+Sans:400,800,700,600,300 | stylesheet_tag: 'screen, projection' }}
+    {{ css/color.css | stylesheet_tag: 'screen, projection' }}
+  %body
+    / Page Loader
+    .loader-wrapper
+      .loader Wait for me...
+    / End
+    / Main Menu Wrapper Start
+    #main-menu.left
+      / Menu Burger
+      .nav-open
+        %a.nav-btn{"data-action" => "open", :href => "#"}
+          .burger-wrap
+            .menu-burger
+              .menu1
+              .menu2
+              .menu3
+      / Sidebar Navigation Start
+      .sidebar-nav
+        .nav-inner-wrap
+          / Menu Close
+          .nav-close
+            %a.nav-btn{"data-action" => "close", :href => "#"}
+              .menu-close
+                .menu1
+                .menu2
+          / Logo Start
+          .logo
+            %a{:href => "index.html"}
+              %img{:alt => "logo", :src => "{{ \"logo.png\" | theme_image_url }}"}/
+          / Logo End
+          / Navigation Menu Start
+          %nav
+            %ul.nav-menu
+              %li.active{"data-menuanchor" => "panelBlock1"}
+                %a{:href => "index.html#panelBlock1"} Home
+              %li{"data-menuanchor" => "panelBlock2"}
+                %a{:href => "index.html#panelBlock2"} About Me
+              %li{"data-menuanchor" => "panelBlock3"}
+                %a{:href => "index.html#panelBlock3"} Portfolio
+              %li{"data-menuanchor" => "panelBlock4"}
+                %a{:href => "index.html#panelBlock4"} Special Offers
+              %li{"data-menuanchor" => "panelBlock5"}
+                %a{:href => "index.html#panelBlock5"} Extra Services
+              %li{"data-menuanchor" => "panelBlock6"}
+                %a{:href => "index.html#panelBlock6"} Blog
+              %li{"data-menuanchor" => "panelBlock7"}
+                %a{:href => "index.html#panelBlock7"} Contact Me...
+              %li
+                %a{:href => "#"} Pages
+                %ul
+                  %li
+                    %a{:href => "about-us.html"} About Me
+                  %li
+                    %a{:href => "portfolio.html"} Portfolio
+                    %ul
+                      %li
+                        %a{:href => "portfolio-single01.html"} Portfolio Single
+                  %li
+                    %a{:href => "blog.html"} Blog
+                    %ul
+                      %li
+                        %a{:href => "blog-single01.html"} Blog Single
+                  %li
+                    %a{:href => "columns.html"} Columns
+                  %li
+                    %a{:href => "elements.html"} Elements
+    #fullpage
+      / Panel-1 Slide Image Panel Start
+      .section.panel-1.slider-panel{"data-bg-color" => "#212121", "data-image-src" => "{{ 'blank.gif' | theme_image_url }}"}
+        / Top Social Media
+        .social-media
+          %ul
+            %li
+              %a{:href => "#"}
+                %i.fa.fa-facebook
+            %li
+              %a{:href => "#"}
+                %i.fa.fa-twitter
+            %li
+              %a{:href => "#"}
+                %i.fa.fa-google
+            %li
+              %a{:href => "#"}
+                %i.fa.fa-pinterest-p
+            %li
+              %a{:href => "#"}
+                %i.fa.fa-linkedin
+        / End
+        .mouse-scroll
+          %a#moveSectionDown{:href => "#"}
+            %img{:alt => "mouse scroll", :src => "{{ 'mouse-scroll.png' | theme_image_url }}"}/
+        .flexslider.slider-panel-wrapper
+          %ul.slides
+            / Slide 1 Start
+            %li{"data-image-src" => "{{ 'upload/self/flower-down.jpg' | theme_image_url }}"}
+              .flex-caption
+                %h1.slide-extralarge-title Welcome
+                .slide-description-small
+                  To my page
+                  %br Viktoria "Niko" Photography
+              .overlay{"data-bg-color" => "#212121", "data-opacity" => "0.4"}
+            / End
+            / Slide 2 Start
+            %li{"data-image-src" => "{{ 'upload/self/forest.jpg' | theme_image_url }}"}
+              .flex-caption
+                %h1.slide-large-title Explore
+                .slide-description-small
+                  The will, the love, the infinity
+                  %br Something that never ends
+              .overlay{"data-bg-color" => "#212121", "data-opacity" => "0.4"}
+            / End
+            / Slide 3 Start
+            %li{"data-image-src" => "{{ 'upload/self/sunny-beach.jpg' | theme_image_url }}"}
+              .flex-caption
+                %h1.slide-large-title Feel
+                .slide-description-small Vibes, atmosphere, a moment
+              .overlay{"data-bg-color" => "#212121", "data-opacity" => "0.4"}
+            / End
+            / Slide 4 Start
+            %li{"data-image-src" => "{{ 'upload/self/welcome-australia.jpg' | theme_image_url }}"}
+              .flex-caption
+                %h1.slide-large-title Fly to the end of the world
+                .slide-description-small For your love and your truth, if you believe
+              .overlay{"data-bg-color" => "#212121", "data-opacity" => "0.4"}
+            / End
+            / Slide 5 Start
+            %li{"data-image-src" => "{{ 'upload/self/even-sunnier.jpg' | theme_image_url }}"}
+              .flex-caption
+                %h1.slide-large-title Sun is the star
+                .slide-description-small Just in case if you didn't know
+              .overlay{"data-bg-color" => "#212121", "data-opacity" => "0.3"}
+            / End
+        / Custom Navigation
+        %ul.slide-nav
+          %li
+            %a.slide-prev.prev{:href => "prev"}
+              %i.fa.fa-angle-left
+          %li
+            %a.slide-next.next{:href => "next"}
+              %i.fa.fa-angle-right
+        / Custom Navigation End
+      / Panel-1 Slide Image Panel End
+      / Panel-2 Home About Us Panel Start
+      .section.panel-2.about-us-panel{"data-bg-color" => "#fff", "data-image-src" => "{{ 'upload/home-about-us-bg-image.jpg' | theme_image_url }}", "data-midnight" => "darkColor"}
+        .container
+          / Icon Element
+          .about-us-element.animate-fadeIn
+            %figure.post-image
+              %img{:alt => "about us", :src => "{{ 'upload/self/viki.jpg' | theme_image_url }}"}/
+            / <i class="fa fa-camera"></i>
+          %div{"data-height" => "60"}
+          .animate-fadeInUp
+            / Blockquote
+            %blockquote.blockquote2
+              %span> E
+              xploring
+              %span{"data-color" => "#4dd0e1"} the land
+              Down Under
+            / Description
+            .about-us-description
+              Everything is possible if you love, believe
+              %br
+                and strive to accomplish.
+            %div{"data-height" => "50"}
+            / Button
+            .button.raised.icon.dark-grey.ripple
+              %div
+                %a{:href => "about-us.html"}
+                  %i.fa.fa-camera>
+                  More About Me
+            %div{"data-height" => "25"}
+        .overlay{"data-bg-color" => "#fff", "data-opacity" => "0.945"}
+      / Panel-2 Home About Us Panel End
+      / Panel-3 Portfolio Panel Style 1 Start
+      .section.panel-3.portfolio-panel1.dark{"data-bg-color" => "#474747", "data-image-src" => "{{ 'blank.gif' | theme_image_url }}"}
+        .container
+          .row
+            .inner-wrapper
+              / Block Title
+              .block-title
+                %h1 Portfolio
+              / End
+              / Category Filter Start
+              .portfolio-filter
+                %ul
+                  %li.filter.selected{"data-category" => "cat-all"} All Categories
+                  %li.filter{"data-category" => "cat-one"} Vestibulum
+                  %li.filter{"data-category" => "cat-two"} Pellentesque
+                  %li.filter{"data-category" => "cat-three"} Aenean
+                  %li.filter{"data-category" => "cat-four"} Sed fringilla
+              / Category Filter End
+        / Portfolio Item Start
+        .portfolio-item
+          .megafolio-container.norounded.noborder
+            / Portfolio Item 1 Start
+            #entry-1.mega-entry.cat-all.cat-four.cat-three{"data-height" => "600", "data-src" => "{{ 'upload/portfolio-thumbnail01.jpg' | theme_image_url }}", "data-width" => "800"}
+              / The Container For The Hover Effect
+              .mega-hover
+                / Title and Subtitle
+                .mega-hovertitle
+                  Quisque vitae sapien
+                  .mega-hoversubtitle Morbi pretium
+                / The Link Button
+                %a{:href => "portfolio-single01.html"}
+                  .mega-hoverlink
+                    %i.fa.fa-link
+                / The Lightbox Button
+                %a.fancybox{"data-fancybox-group" => "group", :href => "{{ 'upload/portfolio01.jpg' | theme_image_url }}", :title => "Lorem ipsum dolor sit amet"}
+                  .mega-hoverview
+                    %i.fa.fa-search-plus
+              / End Of The Hover Effect Markup
+            / Portfolio Item 1 End
+            / Portfolio Item 2 Start
+            #entry-2.mega-entry.cat-all.cat-one.cat-four{"data-height" => "600", "data-src" => "{{ 'upload/portfolio-thumbnail02.jpg' | theme_image_url }}", "data-width" => "800"}
+              / The Container For The Hover Effect
+              .mega-hover
+                / Title and Subtitle
+                .mega-hovertitle
+                  Cras eu vehicula
+                  .mega-hoversubtitle Morbi ut urna
+                / The Link Button
+                %a{:href => "portfolio-single02.html"}
+                  .mega-hoverlink
+                    %i.fa.fa-link
+                / The Lightbox Button
+                %a.fancybox{"data-fancybox-group" => "group", :href => "{{ 'upload/portfolio02.jpg' | theme_image_url }}", :title => "Lorem ipsum dolor sit amet"}
+                  .mega-hoverview
+                    %i.fa.fa-search-plus
+              / End Of The Hover Effect Markup
+            / Portfolio Item 2 End
+            / Portfolio Item 3 Start
+            #entry-3.mega-entry.cat-all.cat-two.cat-one{"data-height" => "600", "data-src" => "{{ 'upload/portfolio-thumbnail03.jpg' | theme_image_url }}", "data-width" => "800"}
+              / The Container For The Hover Effect
+              .mega-hover
+                / Title and Subtitle
+                .mega-hovertitle
+                  Maecenas diam
+                  .mega-hoversubtitle Duis dui porta
+                / The Link Button
+                %a{:href => "portfolio-single03.html"}
+                  .mega-hoverlink
+                    %i.fa.fa-link
+                / The Lightbox Button
+                %a.fancybox{"data-fancybox-group" => "group", :href => "{{ 'upload/portfolio03.jpg' | theme_image_url }}", :title => "Lorem ipsum dolor sit amet"}
+                  .mega-hoverview
+                    %i.fa.fa-search-plus
+              / End Of The Hover Effect Markup
+            / Portfolio Item 3 End
+            / Portfolio Item 4 Start
+            #entry-4.mega-entry.cat-all.cat-three.cat-two{"data-height" => "600", "data-src" => "{{ 'upload/portfolio-thumbnail04.jpg' | theme_image_url }}", "data-width" => "800"}
+              / The Container For The Hover Effect
+              .mega-hover
+                / Title and Subtitle
+                .mega-hovertitle
+                  Duis interdum
+                  .mega-hoversubtitle Aliquam dignissim
+                / The Link Button
+                %a{:href => "portfolio-single04.html"}
+                  .mega-hoverlink
+                    %i.fa.fa-link
+                / The Lightbox Button
+                %a.fancybox{"data-fancybox-group" => "group", :href => "{{ 'upload/portfolio04.jpg' | theme_image_url }}", :title => "Lorem ipsum dolor sit amet"}
+                  .mega-hoverview
+                    %i.fa.fa-search-plus
+              / End Of The Hover Effect Markup
+            / Portfolio Item 4 End
+            / Portfolio Item 5 Start
+            #entry-5.mega-entry.cat-all.cat-one.cat-three{"data-height" => "600", "data-src" => "{{ upload/portfolio-thumbnail05.jpg' | theme_image_url }}", "data-width" => "800"}
+              / The Container For The Hover Effect
+              .mega-hover
+                / Title and Subtitle
+                .mega-hovertitle
+                  Duis ut porta
+                  .mega-hoversubtitle Aenean sollicitudin
+                / The Link Button
+                %a{:href => "portfolio-single05.html"}
+                  .mega-hoverlink
+                    %i.fa.fa-link
+                / The Lightbox Button
+                %a.fancybox{"data-fancybox-group" => "group", :href => "{{ 'upload/portfolio05.jpg' | theme_image_url }}", :title => "Lorem ipsum dolor sit amet"}
+                  .mega-hoverview
+                    %i.fa.fa-search-plus
+              / End Of The Hover Effect Markup
+            / Portfolio Item 5 End
+            / Portfolio Item 6 Start
+            #entry-6.mega-entry.cat-all.cat-three.cat-four{"data-height" => "600", "data-src" => "{{ 'upload/portfolio-thumbnail06.jpg' | theme_image_url }}", "data-width" => "800"}
+              / The Container For The Hover Effect
+              .mega-hover
+                / Title and Subtitle
+                .mega-hovertitle
+                  Duis imperdiet est
+                  .mega-hoversubtitle Nam cursus turpis
+                / The Link Button
+                %a{:href => "portfolio-single06.html"}
+                  .mega-hoverlink
+                    %i.fa.fa-link
+                / The Lightbox Button
+                %a.fancybox{"data-fancybox-group" => "group", :href => "{{ 'upload/portfolio06.jpg' | theme_image_url }}", :title => "Lorem ipsum dolor sit amet"}
+                  .mega-hoverview
+                    %i.fa.fa-search-plus
+              / End Of The Hover Effect Markup
+            / Portfolio Item 6 End
+            / Portfolio Item 7 Start
+            #entry-7.mega-entry.cat-all.cat-two.cat-one{"data-height" => "600", "data-src" => "{{ 'upload/portfolio-thumbnail07.jpg' | theme_image_url }}", "data-width" => "800"}
+              / The Container For The Hover Effect
+              .mega-hover
+                / Title and Subtitle
+                .mega-hovertitle
+                  Nullam sit amet
+                  .mega-hoversubtitle Nam dignissim
+                / The Link Button
+                %a{:href => "portfolio-single07.html"}
+                  .mega-hoverlink
+                    %i.fa.fa-link
+                / The Lightbox Button
+                %a.fancybox{"data-fancybox-group" => "group", :href => "{{ 'upload/portfolio07.jpg' | theme_image_url }}", :title => "Lorem ipsum dolor sit amet"}
+                  .mega-hoverview
+                    %i.fa.fa-search-plus
+              / End Of The Hover Effect Markup
+            / Portfolio Item 7 End
+            / Portfolio Item 8 Start
+            #entry-8.mega-entry.cat-all.cat-four.cat-two{"data-height" => "600", "data-src" => "{{ 'upload/portfolio-thumbnail08.jpg' | theme_image_url }}", "data-width" => "800"}
+              / The Container For The Hover Effect
+              .mega-hover
+                / Title and Subtitle
+                .mega-hovertitle
+                  Ut mauris magna
+                  .mega-hoversubtitle Sed ut consequat
+                / The Link Button
+                %a{:href => "portfolio-single08.html"}
+                  .mega-hoverlink
+                    %i.fa.fa-link
+                / The Lightbox Button
+                %a.fancybox{"data-fancybox-group" => "group", :href => "{{ 'upload/portfolio08.jpg' | theme_image_url }}", :title => "Lorem ipsum dolor sit amet"}
+                  .mega-hoverview
+                    %i.fa.fa-search-plus
+              / End Of The Hover Effect Markup
+            / Portfolio Item 8 End
+        / Portfolio Item End
+        / More Item Link
+        .more-item-link
+          %a{:href => "portfolio.html"} All Portfolio
+        / End
+      / Panel-3 Portfolio Panel Style 1 End
+      / Panel-4 Content Block Style 3 Start
+      .section.panel-4.content-block3.vertical-top.text-right{"data-bg-color" => "#fff", "data-image-src" => "{{ 'upload/home-offers-bg-image.jpg' | theme_image_url }}", "data-midnight" => "darkColor"}
+        .container-fluid
+          .row
+            / Image Left
+            .col-md-6.image-block.img-height.fit-img.animate-fadeIn
+              %figure
+                %img{:alt => "image", :src => "{{ 'upload/special-offers-image.png' | theme_image_url }}"}/
+            / End
+            / Text Right
+            .col-md-6.text-block.content-height
+              .animate-fadeInRight
+                %div{"data-height" => "30"}
+                %h2 Special Offers
+                %p Sed fringilla egestas condimentum. Morbi ut urna nec nunc pretium iaculis. Duis porta, dui vel dictum laoreet, tortor lectus iaculis dui, quis volutpat eros velit sed diam. Duis interdum eu sem sed rhoncus. Maecenas fringilla quam sit amet consectetur. Pellentesque sem in posuere tempus, massa sem rutrum purus, a gravida risus quam eu nulla. Donec at justo id sapien vulputate ornare. Suspendisse risus.
+                %p Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam dignissim viverra dolor sit amet condimentum. Aenean sollicitudin, justo eu pulvinar rutrum, felis lectus mattis purus, a auctor nunc metus gravida dui. Nam cursus turpis vel ullamcorper sagittis. Nam dignissim sapien at tellus ultrices, at posuere dui accumsan. Aenean sodales sodales eros.
+                %div{"data-height" => "23"}
+                / Button
+                .button.raised.icon.dark-grey.ripple
+                  %div
+                    %a{:href => "#"}
+                      %i.fa.fa-camera>
+                      Read More Details
+            / End
+        .overlay{"data-bg-color" => "#fff", "data-opacity" => "0.9"}
+      / Panel-4 Content Block Style 3 End
+      / Panel-5 Content Block Style 2 Start
+      .section.panel-5.content-block2.dark{"data-bg-color" => "#212121", "data-image-src" => "{{ 'blank.gif' | theme_image_url }}"}
+        / Service Carousel Start
+        .owl-carousel.full-carousel-wrapper.block-content
+          / Carousel Title Start
+          .carousel-item.carousel-title{"data-image-src" => "{{ 'upload/extra-services-bg-image.jpg' | theme_image_url }}"}
+            .carousel-inner.title
+              / Carousel Block Title Start
+              .carousel-block-title
+                %h1 Extra
+                %div
+              / Carousel Block Title End
+            .overlay{"data-bg-color" => "#313131", "data-opacity" => "0.5"}
+          / Carousel Title End
+          / Item 1 Start
+          .carousel-item.dark{"data-image-src" => "{{ 'blank.gif' | theme_image_url }}"}
+            .block-thumb-wrap.ripple
+              %a{:href => "#"}
+                .content-block-thumb.fit-img
+                  %img{:alt => "thumbnail", :src => "{{ 'upload/block-content2-thumbnail01.jpg' | theme_image_url }}"}/
+            .content-block-detail{"data-bg-color" => "#313131"}
+              .top-triangle{"data-shape-color" => "#313131"}
+              %h3 Lorem ipsum dolor
+              .item-list-description Sed condimentum nulla semper arcu sed ac erat sit amet enim euismod faucibus amet nec consectetur ac euismod.
+              %a.read-more{:href => "#"} More Details
+          / Item 1 End
+          / Item 2 Start
+          .carousel-item{"data-image-src" => "{{ 'blank.gif' | theme_image_url }}"}
+            .block-thumb-wrap.ripple
+              %a{:href => "#"}
+                .content-block-thumb.fit-img
+                  %img{:alt => "thumbnail", :src => "{{ 'upload/block-content2-thumbnail02.jpg' | theme_image_url }}"}/
+            .content-block-detail{"data-bg-color" => "#fff"}
+              .top-triangle{"data-shape-color" => "#fff"}
+              %h3 Sed fringilla egestas
+              .item-list-description Sed condimentum nulla semper arcu sed ac erat sit amet enim euismod faucibus amet nec consectetur ac euismod.
+              %a.read-more{:href => "#"} More Details
+          / Item 2 End
+          / Item 3 Start
+          .carousel-item.dark{"data-image-src" => "{{ 'blank.gif' | theme_image_url }}"}
+            .block-thumb-wrap.ripple
+              %a{:href => "#"}
+                .content-block-thumb.fit-img
+                  %img{:alt => "thumbnail", :src => "{{ 'upload/block-content2-thumbnail03.jpg' | theme_image_url }}"}/
+            .content-block-detail{"data-bg-color" => "#313131"}
+              .top-triangle{"data-shape-color" => "#313131"}
+              %h3 Vestibulum tincidunt
+              .item-list-description Sed condimentum nulla semper arcu sed ac erat sit amet enim euismod faucibus amet nec consectetur ac euismod.
+              %a.read-more{:href => "#"} More Details
+          / Item 3 End
+          / Item 4 Start
+          .carousel-item{"data-image-src" => "{{ 'blank.gif' | theme_image_url }}"}
+            .block-thumb-wrap.ripple
+              %a{:href => "#"}
+                .content-block-thumb.fit-img
+                  %img{:alt => "thumbnail", :src => "{{ 'upload/block-content2-thumbnail04.jpg' | theme_image_url }}"}/
+            .content-block-detail{"data-bg-color" => "#fff"}
+              .top-triangle{"data-shape-color" => "#fff"}
+              %h3 Sed ac condimentum
+              .item-list-description Sed condimentum nulla semper arcu sed ac erat sit amet enim euismod faucibus amet nec consectetur ac euismod.
+              %a.read-more{:href => "#"} More Details
+          / Item 4 End
+          / Item 5 Start
+          .carousel-item.dark{"data-image-src" => "{{ 'blank.gif' | theme_image_url }}"}
+            .block-thumb-wrap.ripple
+              %a{:href => "#"}
+                .content-block-thumb.fit-img
+                  %img{:alt => "thumbnail", :src => "{{ 'upload/block-content2-thumbnail05.jpg' | theme_image_url }}"}/
+            .content-block-detail{"data-bg-color" => "#313131"}
+              .top-triangle{"data-shape-color" => "#313131"}
+              %h3 Aenean et tortor
+              .item-list-description Sed condimentum nulla semper arcu sed ac erat sit amet enim euismod faucibus amet nec consectetur ac euismod.
+              %a.read-more{:href => "#"} More Details
+          / Item 5 End
+        / Service Carousel End
+        / Custom Navigation
+        .carousel-nav
+          .btn.prev
+            %i.fa.fa-chevron-left
+          .btn.next
+            %i.fa.fa-chevron-right
+        / End
+      / Panel-5 Content Block Style 2 End
+      / Panel-6 Home Blog Panel Start
+      .section.panel-6.home-blog-panel.dark{"data-bg-color" => "#212121", "data-image-src" => "{{ 'upload/home-blog-bg-image.jpg' | theme_image_url }}"}
+        .group-wrapper
+          .container
+            .row
+              .inner-wrapper
+                / Block Title
+                .block-title
+                  %h1 Our Blog
+                / End
+              .animate-fadeInUp
+                / Carousel Items Start
+                .owl-carousel.box-carousel-wrapper
+                  / Item 1 Start
+                  .carousel-item
+                    .carousel-inner
+                      %figure
+                        %img{:alt => "thumbnail", :src => "{{ 'upload/home-blog-panel-thumbnail1.jpg' | theme_image_url }}"}/
+                      .content-block-detail
+                        .fab.light-blue.ripple
+                          %a{:href => "blog-single01.html"}
+                            %i.fa.fa-plus
+                        %h3 Sed fringilla egestas
+                        .item-list-description Sed ac condimentum nulla, quis semper arcu sed ac erat sit amet enim euismod faucibus quisque nec lobortis arcu adipiscing.
+                      .blog-meta.number
+                        %ul
+                          %li
+                            %a{:href => "#"} 05/05
+                          %li
+                            %a{:href => "#"} Category
+                          %li
+                            %a{:href => "#"} 5 Comments
+                  / Item 1 End
+                  / Item 2 Start
+                  .carousel-item
+                    .carousel-inner
+                      %figure
+                        %img{:alt => "thumbnail", :src => "{{ 'upload/home-blog-panel-thumbnail2.jpg' | theme_image_url }}"}/
+                      .content-block-detail
+                        .fab.light-blue.ripple
+                          %a{:href => "blog-single02.html"}
+                            %i.fa.fa-plus
+                        %h3 Lorem ipsum dolor
+                        .item-list-description Sed ac condimentum nulla, quis semper arcu sed ac erat sit amet enim euismod faucibus quisque nec lobortis arcu adipiscing.
+                      .blog-meta.number
+                        %ul
+                          %li
+                            %a{:href => "#"} 05/05
+                          %li
+                            %a{:href => "#"} Category
+                          %li
+                            %a{:href => "#"} 5 Comments
+                  / Item 2 End
+                  / Item 3 Start
+                  .carousel-item
+                    .carousel-inner
+                      %figure
+                        %img{:alt => "thumbnail", :src => "{{ 'upload/home-blog-panel-thumbnail3.jpg' | theme_image_url }}"}/
+                      .content-block-detail
+                        .fab.light-blue.ripple
+                          %a{:href => "blog-single03.html"}
+                            %i.fa.fa-plus
+                        %h3 Aliquam urna dignissim
+                        .item-list-description Sed ac condimentum nulla, quis semper arcu sed ac erat sit amet enim euismod faucibus quisque nec lobortis arcu adipiscing.
+                      .blog-meta.number
+                        %ul
+                          %li
+                            %a{:href => "#"} 05/05
+                          %li
+                            %a{:href => "#"} Category
+                          %li
+                            %a{:href => "#"} 5 Comments
+                  / Item 3 End
+                  / Item 4 Start
+                  .carousel-item
+                    .carousel-inner
+                      %figure
+                        %img{:alt => "thumbnail", :src => "{{ 'upload/home-blog-panel-thumbnail4.jpg' | theme_image_url }}"}/
+                      .content-block-detail
+                        .fab.light-blue.ripple
+                          %a{:href => "blog-single04.html"}
+                            %i.fa.fa-plus
+                        %h3 Vestibulum ante ipsum
+                        .item-list-description Sed ac condimentum nulla, quis semper arcu sed ac erat sit amet enim euismod faucibus quisque nec lobortis arcu adipiscing.
+                      .blog-meta.number
+                        %ul
+                          %li
+                            %a{:href => "#"} 05/05
+                          %li
+                            %a{:href => "#"} Category
+                          %li
+                            %a{:href => "#"} 5 Comments
+                  / Item 4 End
+                  / Item 5 Start
+                  .carousel-item
+                    .carousel-inner
+                      %figure
+                        %img{:alt => "thumbnail", :src => "{{ 'upload/home-blog-panel-thumbnail5.jpg' | theme_image_url }}"}/
+                      .content-block-detail
+                        .fab.light-blue.ripple
+                          %a{:href => "blog-single05.html"}
+                            %i.fa.fa-plus
+                        %h3 Quisque arcu lobortis
+                        .item-list-description Sed ac condimentum nulla, quis semper arcu sed ac erat sit amet enim euismod faucibus quisque nec lobortis arcu adipiscing.
+                      .blog-meta.number
+                        %ul
+                          %li
+                            %a{:href => "#"} 05/05
+                          %li
+                            %a{:href => "#"} Category
+                          %li
+                            %a{:href => "#"} 5 Comments
+                  / Item 5 End
+                  / Item 6 Start
+                  .carousel-item
+                    .carousel-inner
+                      %figure
+                        %img{:alt => "thumbnail", :src => "{{ 'upload/home-blog-panel-thumbnail6.jpg' | theme_image_url }}"}/
+                      .content-block-detail
+                        .fab.light-blue.ripple
+                          %a{:href => "blog-single06.html"}
+                            %i.fa.fa-plus
+                        %h3 Proin euismod velit
+                        .item-list-description Sed ac condimentum nulla, quis semper arcu sed ac erat sit amet enim euismod faucibus quisque nec lobortis arcu adipiscing.
+                      .blog-meta.number
+                        %ul
+                          %li
+                            %a{:href => "#"} 05/05
+                          %li
+                            %a{:href => "#"} Category
+                          %li
+                            %a{:href => "#"} 5 Comments
+                  / Item 6 End
+                / Carousel Items End
+        / More Item Link
+        .more-item-link
+          %a{:href => "blog.html"} All Articles
+        / End
+        .overlay{"data-bg-color" => "#212121", "data-opacity" => "0.4"}
+      / Panel-6 Home Blog Panel End
+      / Panel-7 Home Contact Us Panel Start
+      .section.panel-7.home-contact-panel{"data-bg-color" => "#f7f7f7", "data-image-src" => "{{ 'blank.gif' | theme_image_url }}", "data-midnight" => "darkColor"}
+        .container
+          .row
+            .inner-wrapper
+              / Block Title
+              .block-title
+                %h1 Contact Me
+              / End
+            / Input Field Box Start
+            .col-md-8
+              .box.contact-form-wrapper
+                %form#form_contact.submit-form
+                  / Name and Email Field Box
+                  .row
+                    .col-sm-6.addpadding
+                      .box.text-input
+                        %input#name{:name => "name", :required => "", :type => "text"}/
+                        %label Your Name
+                        %span
+                    .col-sm-6.addpadding
+                      .box.text-input
+                        %input#email{:name => "email", :required => "", :type => "text"}/
+                        %label Your email
+                        %span
+                  / Subject Field Box
+                  .box.text-input
+                    %input#mysubject{:name => "mysubject", :required => "", :type => "text"}/
+                    %label Your subject
+                    %span
+                  / Message Field Box
+                  .box.text-input.textarea
+                    %textarea#mymessage{:name => "mymessage", :required => ""}
+                    %label Your message
+                    %span
+                  / Submit Button
+                  .button.raised.dark-grey
+                    %input#submit_message{:type => "submit", :value => "Send Your Message"}/
+                  %span.loading
+                    %i.fa.fa-spinner.fa-pulse
+                  .clearfix
+                  #reply_message
+            / Input Field Box End
+            / Contact Info Start
+            .col-md-4
+              .box.contact-info-wrapper
+                %ul.contact-info
+                  %li
+                    .contact-info-icon
+                      %span
+                        %i.fa.fa-flag
+                    .contact-info-text.number
+                      South Hurstville
+                      %br
+                        NSW 2221
+                  %li
+                    .contact-info-icon
+                      %span
+                        %i.fa.fa-phone-square
+                    .contact-info-text
+                      Phone:
+                      %br
+                        %span.font-number 123 456 7890
+                  %li
+                    .contact-info-icon
+                      %span
+                        %i.fa.fa-envelope
+                    .contact-info-text.number
+                      Email:
+                      %br
+                        contact@domain.com
+                %div{"data-height" => "41"}
+                .contact-description
+                  %p Lorem ipsum dolor sit amet consectetur mauris magna, lacinia ac purus quis, rutrum bibendum leo. Nullam sit amet nibh eu odio ornare laoreet dolor imperdiet est ut tristique auctor sed.
+                %div{"data-height" => "18"}
+                .button.raised.icon.dark-grey.ripple
+                  %div
+                    %a{:href => "https://www.google.com/maps/place/Envato/@-37.817331,144.955652,17z/data=!3m1!4b1!4m2!3m1!1s0x6ad65d4c2b349649:0xb6899234e561db11?hl=en", :target => "_blank"}
+                      %i.fa.fa-map-marker>
+                      Open Map
+                .clearfix
+            / Contact Info End
+        .overlay{"data-bg-color" => "#f7f7f7", "data-opacity" => "0"}
+      / Panel-7 Home Contact Us Panel End
+      / Panel-8 Footer Panel Start
+      .section.panel-8.footer-panel.dark{"data-bg-color" => "#111111", "data-image-src" => "{{ 'upload/footer-bg-image.jpg' | theme_image_url }}"}
+        .container
+          %div{"data-height" => "30"}
+          / Footer Logo
+          .footer-logo.animate-fadeIn
+            %a{:href => "#"}
+              %img{:alt => "footer logo", :src => "{{ 'upload/footer-logo.png' | theme_image_url }}"}/
+          %div{"data-height" => "80"}
+          / Footer Description
+          .footer-description.animate-fadeIn
+            Sed fringilla
+            %span{"data-color" => "#00acc1"} egestas morbi
+            condimentum
+          %div{"data-height" => "35"}
+          .footer-subdescription.animate-fadeIn
+            Lorem ipsum dolor sit amet consectetur adipiscing
+            %br
+              mauris magna lacinia purus quis.
+          %div{"data-height" => "80"}
+          .animate-fadeIn
+            / Footer Social Media
+            .social-media
+              %ul
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-facebook
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-twitter
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-google
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-pinterest-p
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-linkedin
+            / Copyright
+            .copyright
+              Copyrights © 2016-17
+              = succeed "." do
+                %a{:href => "#"} Viki
+              All Rights Reserved.
+        .overlay{"data-bg-color" => "#111111", "data-opacity" => "0.8"}
+      / Panel-8 Footer Panel End
+    / Fullpage Wrapper End
+    / jQuery files
+    {{ 'js/vendor/jquery-1.11.1.min' | javascript_tag }}
+    {{ 'js/vendor/jquery.easings.min' | javascript_tag }}
+    {{ 'js/vendor/jquery.slimscroll.min' | javascript_tag }}
+    {{ 'js/jquery.viewport' | javascript_tag }}
+    {{ 'js/retina' | javascript_tag }}
+    {{ "js/jquery.sidebar.min.js" | javascript_tag }}
+    {{ "bower_components/owl.carousel/owl.carousel.min.js" | javascript_tag }}
+    {{ "bower_components/FlexSlider/jquery.flexslider.js" | javascript_tag }}
+    {{ "bower_components/megafolio/js/jquery.themepunch.tools.min.js" | javascript_tag }}
+    {{ "bower_components/megafolio/js/jquery.themepunch.megafoliopro.js" | javascript_tag }}
+    {{ "bower_components/fancybox/jquery.fancybox.pack.js?v=2.1.5" | javascript_tag }}
+    {{ "js/jquery.fullPage.min.js" | javascript_tag }}
+    {{ "js/midnight.jquery.min.js" | javascript_tag }}
+    {{ "bower_components/tooltipster/js/jquery.tooltipster.min.js" | javascript_tag }}
+    {{ "bower_components/tabulous/tabulous.js" | javascript_tag }}
+    {{ "js/custom.js" | javascript_tag }}
