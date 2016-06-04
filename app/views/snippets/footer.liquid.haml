@@ -1,3 +1,46 @@
-.container
-  %footer.footer
-    %p © Company {{ now | localized_date: '%Y' }}
+.section.panel-8.footer-panel.dark{"data-bg-color" => "#111111", "data-image-src" => "{{ 'upload/footer-bg-image.jpg' | theme_image_url }}"}
+  .container
+    %div{"data-height" => "30"}
+    / Footer Logo
+    .footer-logo.animate-fadeIn
+      %a{:href => "#"}
+        %img{:alt => "footer logo", :src => "{{ 'upload/footer-logo.png' | theme_image_url }}"}/
+    %div{"data-height" => "80"}
+    / Footer Description
+    .footer-description.animate-fadeIn
+      Sed fringilla
+      %span{"data-color" => "#00acc1"} egestas morbi
+      condimentum
+    %div{"data-height" => "35"}
+    .footer-subdescription.animate-fadeIn
+      Lorem ipsum dolor sit amet consectetur adipiscing
+      %br
+        mauris magna lacinia purus quis.
+    %div{"data-height" => "80"}
+    .animate-fadeIn
+      / Footer Social Media
+      .social-media
+        %ul
+          %li
+            %a{:href => "#"}
+              %i.fa.fa-facebook
+          %li
+            %a{:href => "#"}
+              %i.fa.fa-twitter
+          %li
+            %a{:href => "#"}
+              %i.fa.fa-google
+          %li
+            %a{:href => "#"}
+              %i.fa.fa-pinterest-p
+          %li
+            %a{:href => "#"}
+              %i.fa.fa-linkedin
+      / Copyright
+      .copyright
+        Copyrights © {{ now | localized_date: '%Y' }}
+        = succeed "." do
+          %a{:href => "#"} Viki
+        All Rights Reserved.
+  .overlay{"data-bg-color" => "#111111", "data-opacity" => "0.8"}
+/ Panel-8 Footer Panel End
