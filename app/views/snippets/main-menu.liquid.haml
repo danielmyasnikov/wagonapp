@@ -1,0 +1,59 @@
+#main-menu.left
+  / Menu Burger
+  .nav-open
+    %a.nav-btn{"data-action" => "open", :href => "#"}
+      .burger-wrap
+        .menu-burger
+          .menu1
+          .menu2
+          .menu3
+  / Sidebar Navigation Start
+  .sidebar-nav
+    .nav-inner-wrap
+      / Menu Close
+      .nav-close
+        %a.nav-btn{"data-action" => "close", :href => "#"}
+          .menu-close
+            .menu1
+            .menu2
+      / Logo Start
+      .logo
+        %a{:href => "index.html"}
+          %img{:alt => "logo", :src => "{{ \"logo.png\" | theme_image_url }}"}/
+      / Logo End
+      / Navigation Menu Start
+      %nav
+        %ul.nav-menu
+          %li.active{"data-menuanchor" => "panelBlock1"}
+            %a{:href => "index.html#panelBlock1"} Home
+          %li{"data-menuanchor" => "panelBlock2"}
+            %a{:href => "index.html#panelBlock2"} About Me
+          %li{"data-menuanchor" => "panelBlock3"}
+            %a{:href => "index.html#panelBlock3"} Portfolio
+          %li{"data-menuanchor" => "panelBlock4"}
+            %a{:href => "index.html#panelBlock4"} Special Offers
+          %li{"data-menuanchor" => "panelBlock5"}
+            %a{:href => "index.html#panelBlock5"} Extra Services
+          %li{"data-menuanchor" => "panelBlock6"}
+            %a{:href => "index.html#panelBlock6"} Blog
+          %li{"data-menuanchor" => "panelBlock7"}
+            %a{:href => "index.html#panelBlock7"} Contact Me...
+          %li.hidden
+            %a{:href => "#"} Pages
+            %ul
+              %li
+                %a{:href => "about-us.html"} About Me
+              %li
+                %a{:href => "portfolio.html"} Portfolio
+                %ul
+                  %li
+                    %a{:href => "portfolio-single01.html"} Portfolio Single
+              %li
+                %a{:href => "blog.html"} Blog
+                %ul
+                  %li
+                    %a{:href => "blog-single01.html"} Blog Single
+              %li
+                %a{:href => "columns.html"} Columns
+              %li
+                %a{:href => "elements.html"} Elements

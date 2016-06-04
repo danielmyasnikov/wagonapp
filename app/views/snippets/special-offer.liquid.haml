@@ -1,0 +1,26 @@
+{% assign offer = contents.special_offers.first %}
+
+.section.panel-4.content-block3.vertical-top.text-right{"data-bg-color" => "#fff", "data-image-src" => "{{ 'upload/home-offers-bg-image.jpg' | theme_image_url }}", "data-midnight" => "darkColor"}
+  .container-fluid
+    .row
+      / Image Left
+      .col-md-6.image-block.img-height.fit-img.animate-fadeIn
+        %figure
+          %img{:alt => "image", :src => "{{ offer.image.url | default: 'upload/special-offers-image.png' | theme_image_url }}"}/
+      / End
+      / Text Right
+      .col-md-6.text-block.content-height
+        .animate-fadeInRight
+          %div{"data-height" => "30"}
+          %h2 {{ offer.title }}
+          {{ offer.body }}
+          %div{"data-height" => "23"}
+          / Button
+          .button.raised.icon.dark-grey.ripple
+            %div
+              %a{:href => "#"}
+                %i.fa.fa-camera>
+                Read More Details
+      / End
+  .overlay{"data-bg-color" => "#fff", "data-opacity" => "0.9"}
+/ Panel-4 Content Block Style 3 End

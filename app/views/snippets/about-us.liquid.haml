@@ -1,0 +1,30 @@
+.section.panel-2.about-us-panel{"data-bg-color" => "#fff", "data-image-src" => "{{ 'upload/home-about-us-bg-image.jpg' | theme_image_url }}", "data-midnight" => "darkColor"}
+  .container
+    / Icon Element
+    .about-us-element.animate-fadeIn
+      %figure.post-image
+        %img{:alt => "about us", :src => "{{ 'upload/self/viki.jpg' | theme_image_url }}"}/
+      / <i class="fa fa-camera"></i>
+    %div{"data-height" => "60"}
+    .animate-fadeInUp
+      / Blockquote
+      %blockquote.blockquote2
+        %span> E
+        xploring
+        %span{"data-color" => "#4dd0e1"} the land
+        Down Under
+      / Description
+      .about-us-description
+        Everything is possible if you love, believe
+        %br
+          and strive to accomplish.
+      %div{"data-height" => "50"}
+      / Button
+      .button.raised.icon.dark-grey.ripple
+        %div
+          %a{:href => "about-us.html"}
+            %i.fa.fa-camera>
+            More About Me
+      %div{"data-height" => "25"}
+  .overlay{"data-bg-color" => "#fff", "data-opacity" => "0.945"}
+/ Panel-2 Home About Us Panel End

@@ -1,0 +1,86 @@
+.section.panel-7.home-contact-panel{"data-bg-color" => "#f7f7f7", "data-image-src" => "{{ 'blank.gif' | theme_image_url }}", "data-midnight" => "darkColor"}
+  .container
+    .row
+      .inner-wrapper
+        / Block Title
+        .block-title
+          %h1 Contact Me
+        / End
+      / Input Field Box Start
+      .col-md-8
+        .box.contact-form-wrapper
+          %form#form_contact.submit-form
+            / Name and Email Field Box
+            .row
+              .col-sm-6.addpadding
+                .box.text-input
+                  %input#name{:name => "name", :required => "", :type => "text"}/
+                  %label Your Name
+                  %span
+              .col-sm-6.addpadding
+                .box.text-input
+                  %input#email{:name => "email", :required => "", :type => "text"}/
+                  %label Your email
+                  %span
+            / Subject Field Box
+            .box.text-input
+              %input#mysubject{:name => "mysubject", :required => "", :type => "text"}/
+              %label Your subject
+              %span
+            / Message Field Box
+            .box.text-input.textarea
+              %textarea#mymessage{:name => "mymessage", :required => ""}
+              %label Your message
+              %span
+            / Submit Button
+            .button.raised.dark-grey
+              %input#submit_message{:type => "submit", :value => "Send Your Message"}/
+            %span.loading
+              %i.fa.fa-spinner.fa-pulse
+            .clearfix
+            #reply_message
+      / Input Field Box End
+      / Contact Info Start
+      .col-md-4
+        .box.contact-info-wrapper
+          %ul.contact-info
+            %li
+              .contact-info-icon
+                %span
+                  %i.fa.fa-flag
+              .contact-info-text.number
+                South Hurstville
+                %br
+                  NSW 2221
+            %li
+              .contact-info-icon
+                %span
+                  %i.fa.fa-phone-square
+              .contact-info-text
+                Phone:
+                %br
+                  %span.font-number 123 456 7890
+            %li
+              .contact-info-icon
+                %span
+                  %i.fa.fa-envelope
+              .contact-info-text.number
+                Email:
+                %br
+                  contact@domain.com
+          %div{"data-height" => "41"}
+          .contact-description
+            {% editable_text contact_us %}
+            %p
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam ducimus consectetur?
+            {% endeditable_text %}
+          %div{"data-height" => "18"}
+          .button.raised.icon.dark-grey.ripple
+            %div
+              %a{:href => "https://www.google.com/maps/place/Envato/@-37.817331,151.955652,17z/data=!3m1!4b1!4m2!3m1!1s0x6ad65d4c2b349649:0xb6899234e561db11?hl=en", :target => "_blank"}
+                %i.fa.fa-map-marker>
+                Open Map
+          .clearfix
+      / Contact Info End
+  .overlay{"data-bg-color" => "#f7f7f7", "data-opacity" => "0"}
+/ Panel-7 Home Contact Us Panel End

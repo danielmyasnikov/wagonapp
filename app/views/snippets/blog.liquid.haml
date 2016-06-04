@@ -1,0 +1,38 @@
+.section.panel-6.home-blog-panel.dark{"data-bg-color" => "#212121", "data-image-src" => "{{ 'upload/home-blog-bg-image.jpg' | theme_image_url }}"}
+  .group-wrapper
+    .container
+      .row
+        .inner-wrapper
+          / Block Title
+          .block-title
+            %h1 My Blog
+          / End
+        .animate-fadeInUp
+          / Carousel Items Start
+          .owl-carousel.box-carousel-wrapper
+            {% for blog in contents.blog_post %}
+            .carousel-item
+              .carousel-inner
+                %figure
+                  %img{:alt => "thumbnail", :src => "{{ blog.image.url | default: 'upload/home-blog-panel-thumbnail1.jpg' | theme_image_url }}"}/
+                .content-block-detail
+                  .fab.light-blue.ripple
+                    %a{:href => "{{ blog.title }}"}
+                      %i.fa.fa-plus
+                  %h3 {{ blog.title }}
+                  .item-list-description {{ blog.body | truncate: 160 }}
+                .blog-meta.number.hidden
+                  %ul
+                    %li
+                      %a{:href => "#"} 05/05
+                    %li
+                      %a{:href => "#"} Category
+                    %li
+                      %a{:href => "#"} 5 Comments
+            {% endfor %}
+  / More Item Link
+  .more-item-link
+    %a{:href => "blog.html"} All Articles
+  / End
+  .overlay{"data-bg-color" => "#212121", "data-opacity" => "0.4"}
+/ Panel-6 Home Blog Panel End

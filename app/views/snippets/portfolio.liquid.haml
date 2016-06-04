@@ -1,0 +1,41 @@
+.section.panel-3.portfolio-panel1.dark{"data-bg-color" => "#474747", "data-image-src" => "{{ 'blank.gif' | theme_image_url }}"}
+  .container
+    .row
+      .inner-wrapper
+        / Block Title
+        .block-title
+          %h1 Portfolio
+        / End
+        / Category Filter Start
+        .portfolio-filter
+          %ul
+            %li.filter.selected{"data-category" => "cat-all"} All Categories
+            %li.filter{"data-category" => "cat-one"} Vestibulum
+            %li.filter{"data-category" => "cat-two"} Pellentesque
+            %li.filter{"data-category" => "cat-three"} Aenean
+            %li.filter{"data-category" => "cat-four"} Sed fringilla
+        / Category Filter End
+  / Portfolio Item Start
+  .portfolio-item
+    .megafolio-container.norounded.noborder
+      / Portfolio Item 1 Start
+      {% for portfolio in contents.portfolio %}
+      .mega-entry.cat-all{"data-height" => "600", "data-src" => "{{ portfolio.image.url | default: 'upload/portfolio02.jpg' | theme_image_url }}", "data-width" => "800", :class => "portfolio.title" }
+        / The Container For The Hover Effect
+        .mega-hover
+          / Title and Subtitle
+          .mega-hovertitle
+            {{ portfolio.title }}
+          / The Link Button
+          %a{:href => "{{ portfolio.title | slugify }}"}
+            .mega-hoverlink
+              %i.fa.fa-link
+          / The Lightbox Button
+          %a.fancybox{"data-fancybox-group" => "group", :href => "{{ portfolio.image.url | default: 'upload/portfolio02.jpg' | theme_image_url }}", :title => "{{ portfilio.title }}"}
+            .mega-hoverview
+              %i.fa.fa-search-plus
+      {% endfor %} 
+  .more-item-link
+    %a{:href => "portfolio.html"} All Portfolio
+  / End
+/ Panel-3 Portfolio Panel Style 1 End

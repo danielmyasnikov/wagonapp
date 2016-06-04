@@ -1,0 +1,75 @@
+/ Panel-1 Slide Image Panel Start
+.section.panel-1.slider-panel{"data-bg-color" => "#212121", "data-image-src" => "{{ 'blank.gif' | theme_image_url }}"}
+  / Top Social Media
+  .social-media
+    %ul
+      %li
+        %a{:href => "#"}
+          %i.fa.fa-facebook
+      %li
+        %a{:href => "#"}
+          %i.fa.fa-twitter
+      %li
+        %a{:href => "#"}
+          %i.fa.fa-google
+      %li
+        %a{:href => "#"}
+          %i.fa.fa-pinterest-p
+      %li
+        %a{:href => "#"}
+          %i.fa.fa-linkedin
+  / End
+  .mouse-scroll
+    %a#moveSectionDown{:href => "#"}
+      %img{:alt => "mouse scroll", :src => "{{ 'mouse-scroll.png' | theme_image_url }}"}/
+  .flexslider.slider-panel-wrapper
+    %ul.slides
+      / Slide 1 Start
+      %li{"data-image-src" => "{{ 'upload/self/flower-down.jpg' | theme_image_url }}"}
+        .flex-caption
+          %h1.slide-extralarge-title Welcome
+          .slide-description-small
+            To my page
+            %br Viktoria "Niko" Photography
+        .overlay{"data-bg-color" => "#212121", "data-opacity" => "0.4"}
+      / End
+      / Slide 2 Start
+      %li{"data-image-src" => "{{ 'upload/self/forest.jpg' | theme_image_url }}"}
+        .flex-caption
+          %h1.slide-large-title Explore
+          .slide-description-small
+            The will, the love, the infinity
+            %br Something that never ends
+        .overlay{"data-bg-color" => "#212121", "data-opacity" => "0.4"}
+      / End
+      / Slide 3 Start
+      %li{"data-image-src" => "{{ 'upload/self/sunny-beach.jpg' | theme_image_url }}"}
+        .flex-caption
+          %h1.slide-large-title Feel
+          .slide-description-small Vibes, atmosphere, a moment
+        .overlay{"data-bg-color" => "#212121", "data-opacity" => "0.4"}
+      / End
+      / Slide 4 Start
+      %li{"data-image-src" => "{{ 'upload/self/welcome-australia.jpg' | theme_image_url }}"}
+        .flex-caption
+          %h1.slide-large-title Fly to the end of the world
+          .slide-description-small For your love and your truth, if you believe
+        .overlay{"data-bg-color" => "#212121", "data-opacity" => "0.4"}
+      / End
+      / Slide 5 Start
+      %li{"data-image-src" => "{{ 'upload/self/even-sunnier.jpg' | theme_image_url }}"}
+        .flex-caption
+          %h1.slide-large-title Sun is the star
+          .slide-description-small Just in case if you didn't know
+        .overlay{"data-bg-color" => "#212121", "data-opacity" => "0.3"}
+      / End
+  / Custom Navigation
+  %ul.slide-nav
+    %li
+      %a.slide-prev.prev{:href => "prev"}
+        %i.fa.fa-angle-left
+    %li
+      %a.slide-next.next{:href => "next"}
+        %i.fa.fa-angle-right
+  / Custom Navigation End
+/ Panel-1 Slide Image Panel End

@@ -8,14 +8,15 @@
     %div{"data-height" => "80"}
     / Footer Description
     .footer-description.animate-fadeIn
-      Sed fringilla
-      %span{"data-color" => "#00acc1"} egestas morbi
-      condimentum
+      {% editable_text footer_header %}
+      %h1 Lorem ipsum
+      {% endeditable_text %}
     %div{"data-height" => "35"}
     .footer-subdescription.animate-fadeIn
-      Lorem ipsum dolor sit amet consectetur adipiscing
-      %br
-        mauris magna lacinia purus quis.
+      {% editable_text footer_body %}
+      %p
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam ducimus consectetur?
+      {% endeditable_text %}
     %div{"data-height" => "80"}
     .animate-fadeIn
       / Footer Social Media

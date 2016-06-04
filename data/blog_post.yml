@@ -1,0 +1,20 @@
+- "Sample 1":
+    body: "Modi ut aut temporibus non. Libero consequuntur id velit perferendis dolores rerum ea. Quo quis laboriosam fuga sed."
+    image: null
+    publish: true # Or false
+
+- "Sample 2":
+    body: "Labore ipsa explicabo. Magni accusantium earum sapiente. Veniam aliquid et ea accusamus. Quae nobis aut est perspiciatis alias."
+    image: null
+    publish: true # Or false
+
+- "Sample 3":
+    body: "In aliquam nam quas aut voluptas aut sapiente. Nulla iusto quod est quis omnis natus. Quo occaecati ut eligendi."
+    image: null
+    publish: true # Or false
+
+- "Sample 4":
+    body: "Placeat quis vel ratione totam perferendis. Maxime porro aspernatur. Molestiae eos optio blanditiis atque nihil. Aut quidem nobis doloribus excepturi tempora asperiores."
+    image: null
+    publish: true # Or false
+
